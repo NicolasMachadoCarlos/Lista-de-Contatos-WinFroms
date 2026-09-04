@@ -104,6 +104,7 @@
             // 
             this.lstContato.HideSelection = false;
             this.lstContato.Location = new System.Drawing.Point(173, 57);
+            this.lstContato.MultiSelect = false;
             this.lstContato.Name = "lstContato";
             this.lstContato.Size = new System.Drawing.Size(484, 386);
             this.lstContato.TabIndex = 7;
