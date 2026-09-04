@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using DataBase;
+
+namespace WFDoTNetMySQL
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+
+            lstContato.View = View.Details;
+            lstContato.GridLines = true;
+            lstContato.AllowColumnReorder = false;
+            lstContato.FullRowSelect = true;
+            
+
+            lstContato.Columns.Add("Id", 30, HorizontalAlignment.Left);
+            lstContato.Columns.Add("Nome", 150, HorizontalAlignment.Left);
+            lstContato.Columns.Add("E-mail", 150, HorizontalAlignment.Left);
+            lstContato.Columns.Add("Telefone", 150, HorizontalAlignment.Left);
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DbCreate.InsertData(txtNome.Text, txtEmail.Text, txtTelefone.Text);
+
+                MessageBox.Show("Dados inseridos com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNome.Clear();
+                txtEmail.Clear();
+                txtTelefone.Clear();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }          
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string txtSearch = txtBuscar.Text;
+
+            try
+            {
+                var data = DbRead.ReadData(txtSearch);
+
+                lstContato.Items.Clear();
+
+                foreach(var item in data)
+                {
+                    ListViewItem listView = new ListViewItem(item[0]);
+                    listView.SubItems.Add(item[1]);
+                    listView.SubItems.Add(item[2]);
+                    listView.SubItems.Add(item[3]);
+                    lstContato.Items.Add(listView);
+                }
+
+                txtBuscar.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
