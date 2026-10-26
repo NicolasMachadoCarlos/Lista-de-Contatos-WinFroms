@@ -14,7 +14,9 @@ namespace DataBase
     {      
         public static void InsertData(string nome, string email, string telefone)
         {
-            string txtCmd = "INSERT INTO contato (nome, email, telefone) VALUES (@nome, @email, @telefone)";
+            string txtCmd = "INSERT INTO contato " +
+                            "(nome, email, telefone) " +
+                            "VALUES (@nome, @email, @telefone)";
 
             try
             {

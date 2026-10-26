@@ -95,6 +95,7 @@
     <Compile Include="DataBase\DbCreate.cs" />
     <Compile Include="DataBase\DbConnection.cs" />
     <Compile Include="DataBase\DbRead.cs" />
+    <Compile Include="DataBase\DbUpdate.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

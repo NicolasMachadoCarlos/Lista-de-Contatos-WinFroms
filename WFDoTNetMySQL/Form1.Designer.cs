@@ -39,7 +39,7 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Label();
-            this.Update = new System.Windows.Forms.Button();
+            this.Novo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -92,7 +92,7 @@
             // 
             // Create
             // 
-            this.Create.Location = new System.Drawing.Point(92, 143);
+            this.Create.Location = new System.Drawing.Point(12, 142);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 23);
             this.Create.TabIndex = 6;
@@ -109,6 +109,7 @@
             this.lstContato.Size = new System.Drawing.Size(484, 386);
             this.lstContato.TabIndex = 7;
             this.lstContato.UseCompatibleStateImageBehavior = false;
+            this.lstContato.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstContato_ItemSelectionChanged);
             // 
             // txtBuscar
             // 
@@ -136,22 +137,22 @@
             this.Busca.TabIndex = 10;
             this.Busca.Text = "Buscar";
             // 
-            // Update
+            // Novo
             // 
-            this.Update.Location = new System.Drawing.Point(11, 143);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 12;
-            this.Update.Text = "Atualizar";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.Novo.Location = new System.Drawing.Point(12, 171);
+            this.Novo.Name = "Novo";
+            this.Novo.Size = new System.Drawing.Size(75, 23);
+            this.Novo.TabIndex = 11;
+            this.Novo.Text = "Novo";
+            this.Novo.UseVisualStyleBackColor = true;
+            this.Novo.Click += new System.EventHandler(this.Novo_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 447);
-            this.Controls.Add(this.Update);
+            this.Controls.Add(this.Novo);
             this.Controls.Add(this.Busca);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.txtBuscar);
@@ -183,7 +184,7 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Label Busca;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button Novo;
     }
 }
 

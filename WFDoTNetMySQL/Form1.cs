@@ -14,6 +14,7 @@ namespace WFDoTNetMySQL
 {
     public partial class Form1 : Form
     {
+        private int? idSelecionado = null;
 
         public Form1()
         {
@@ -37,9 +38,21 @@ namespace WFDoTNetMySQL
         {
             try
             {
-                DbCreate.InsertData(txtNome.Text, txtEmail.Text, txtTelefone.Text);
+                
+                if (idSelecionado == null)
+                {
+                    DbCreate.InsertData(txtNome.Text, txtEmail.Text, txtTelefone.Text);
 
-                MessageBox.Show("Dados inseridos com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados inseridos com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DbUpdate.UpadteData(idSelecionado, txtNome.Text, txtEmail.Text, txtTelefone.Text);
+
+                    MessageBox.Show("Dados atualizados com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                
+                idSelecionado = null;
                 txtNome.Clear();
                 txtEmail.Clear();
                 txtTelefone.Clear();
@@ -80,9 +93,28 @@ namespace WFDoTNetMySQL
             
         }
 
-        private void Update_Click(object sender, EventArgs e)
+        private void lstContato_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
+            ListView.SelectedListViewItemCollection itensSelecionados = lstContato.SelectedItems;
 
+            foreach (ListViewItem item in itensSelecionados) 
+            {
+                idSelecionado = int.Parse(item.SubItems[0].Text);
+                txtNome.Text = item.SubItems[1].Text;
+                txtTelefone.Text = item.SubItems[2].Text;
+                txtEmail.Text = item.SubItems[3].Text;
+
+               
+            }
+        }
+
+        private void Novo_Click(object sender, EventArgs e)
+        {
+            idSelecionado = null;
+
+            txtNome.Text = "";
+            txtTelefone.Text = "";
+            txtEmail.Text = "";
         }
     }
 }
