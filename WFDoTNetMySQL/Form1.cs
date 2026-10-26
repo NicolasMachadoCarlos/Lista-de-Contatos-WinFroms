@@ -24,7 +24,7 @@ namespace WFDoTNetMySQL
             lstContato.GridLines = true;
             lstContato.AllowColumnReorder = false;
             lstContato.FullRowSelect = true;
-            
+
 
             lstContato.Columns.Add("Id", 30, HorizontalAlignment.Left);
             lstContato.Columns.Add("Nome", 150, HorizontalAlignment.Left);
@@ -32,6 +32,18 @@ namespace WFDoTNetMySQL
             lstContato.Columns.Add("Telefone", 150, HorizontalAlignment.Left);
 
 
+        }
+
+        private void InsertItens(List<string[]> list)
+        {
+            foreach (var item in list)
+            {
+                ListViewItem listView = new ListViewItem(item[0]);
+                listView.SubItems.Add(item[1]);
+                listView.SubItems.Add(item[2]);
+                listView.SubItems.Add(item[3]);
+                lstContato.Items.Add(listView);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -50,6 +62,15 @@ namespace WFDoTNetMySQL
                     DbUpdate.UpadteData(idSelecionado, txtNome.Text, txtEmail.Text, txtTelefone.Text);
 
                     MessageBox.Show("Dados atualizados com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string txtSearch = txtBuscar.Text;
+                                       
+                    var data = DbRead.ReadData(txtSearch);
+
+                    lstContato.Items.Clear();
+
+                    InsertItens(data);
+                                                                          
                 }
                 
                 idSelecionado = null;
@@ -75,14 +96,7 @@ namespace WFDoTNetMySQL
 
                 lstContato.Items.Clear();
 
-                foreach(var item in data)
-                {
-                    ListViewItem listView = new ListViewItem(item[0]);
-                    listView.SubItems.Add(item[1]);
-                    listView.SubItems.Add(item[2]);
-                    listView.SubItems.Add(item[3]);
-                    lstContato.Items.Add(listView);
-                }
+                InsertItens(data);
 
                 txtBuscar.Clear();
             }
@@ -101,10 +115,9 @@ namespace WFDoTNetMySQL
             {
                 idSelecionado = int.Parse(item.SubItems[0].Text);
                 txtNome.Text = item.SubItems[1].Text;
-                txtTelefone.Text = item.SubItems[2].Text;
-                txtEmail.Text = item.SubItems[3].Text;
-
-               
+                txtEmail.Text = item.SubItems[2].Text;
+                txtTelefone.Text = item.SubItems[3].Text;
+                                              
             }
         }
 

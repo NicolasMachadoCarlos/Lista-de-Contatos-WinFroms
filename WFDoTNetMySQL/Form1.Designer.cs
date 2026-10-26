@@ -106,7 +106,7 @@
             this.lstContato.Location = new System.Drawing.Point(173, 57);
             this.lstContato.MultiSelect = false;
             this.lstContato.Name = "lstContato";
-            this.lstContato.Size = new System.Drawing.Size(484, 386);
+            this.lstContato.Size = new System.Drawing.Size(484, 378);
             this.lstContato.TabIndex = 7;
             this.lstContato.UseCompatibleStateImageBehavior = false;
             this.lstContato.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstContato_ItemSelectionChanged);
