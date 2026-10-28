@@ -10,7 +10,7 @@ using WFDoTNetMySQL;
 
 namespace DataBase
 {
-    public static class DbCreate
+    internal static class DbCreate
     {      
         public static void InsertData(string nome, string email, string telefone)
         {

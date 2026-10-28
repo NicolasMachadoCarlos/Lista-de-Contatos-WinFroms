@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataBase
 {
    
-     public class DbConnection
+     internal class DbConnection
     {
         private static MySqlConnection Connection = 
             new MySqlConnection("server=localhost;user=root;password=24tY89oP@Mysql9;database=db_agenda");

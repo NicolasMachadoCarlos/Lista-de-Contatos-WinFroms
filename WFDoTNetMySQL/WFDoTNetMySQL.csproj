@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="DataBase\DbCreate.cs" />
     <Compile Include="DataBase\DbConnection.cs" />
+    <Compile Include="DataBase\DbDelete.cs" />
     <Compile Include="DataBase\DbRead.cs" />
     <Compile Include="DataBase\DbUpdate.cs" />
     <Compile Include="Form1.cs">

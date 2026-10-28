@@ -131,5 +131,37 @@ namespace WFDoTNetMySQL
             txtTelefone.Text = "";
             txtEmail.Text = "";
         }
+
+        private void Excluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult selectedOption = MessageBox.Show("Deseja excluir o contato selecionado?",
+                                                              "Excluir", MessageBoxButtons.YesNo, 
+                                                              MessageBoxIcon.Warning);
+                
+                if (selectedOption == DialogResult.Yes) 
+                {
+                    DbDelete.ExcluirItem(idSelecionado);
+
+                    MessageBox.Show("Contato excluido", "Execução concluida",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    string txtSearch = caracteristicaSelecionada;
+
+                    var data = DbRead.ReadData(txtSearch);
+
+                    lstContato.Items.Clear();
+
+                    InsertItens(data);
+
+                }
+             
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

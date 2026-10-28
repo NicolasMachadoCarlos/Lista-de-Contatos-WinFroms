@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DataBase
 {
-    public static class DbRead
+    internal static class DbRead
     {
         public static List<string[]> ReadData(string txt)
         {

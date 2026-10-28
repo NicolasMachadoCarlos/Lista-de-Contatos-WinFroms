@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,9 @@
             this.Search = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Label();
             this.Novo = new System.Windows.Forms.Button();
+            this.Excluir = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Excluir.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -102,11 +106,12 @@
             // 
             // lstContato
             // 
+            this.lstContato.ContextMenuStrip = this.Excluir;
             this.lstContato.HideSelection = false;
             this.lstContato.Location = new System.Drawing.Point(173, 57);
             this.lstContato.MultiSelect = false;
             this.lstContato.Name = "lstContato";
-            this.lstContato.Size = new System.Drawing.Size(484, 378);
+            this.lstContato.Size = new System.Drawing.Size(484, 368);
             this.lstContato.TabIndex = 7;
             this.lstContato.UseCompatibleStateImageBehavior = false;
             this.lstContato.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstContato_ItemSelectionChanged);
@@ -147,11 +152,26 @@
             this.Novo.UseVisualStyleBackColor = true;
             this.Novo.Click += new System.EventHandler(this.Novo_Click);
             // 
+            // Excluir
+            // 
+            this.Excluir.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(109, 26);
+            this.Excluir.Text = "Excluir";
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Excluir";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 447);
+            this.ClientSize = new System.Drawing.Size(662, 431);
             this.Controls.Add(this.Novo);
             this.Controls.Add(this.Busca);
             this.Controls.Add(this.Search);
@@ -166,6 +186,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Excluir.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,8 +206,8 @@
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Label Busca;
         private System.Windows.Forms.Button Novo;
-        
-
+        private System.Windows.Forms.ContextMenuStrip Excluir;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 

@@ -9,14 +9,13 @@ using WFDoTNetMySQL;
 
 namespace DataBase
 {
-    internal class DbUpdate
+    internal static class DbUpdate
     {
         public static void UpadteData(int ?id, string nome, string email, string telefone)
         {
             string txtCmd = "UPDATE contato SET " +
                              "nome=@nome, email=@email, telefone=@telefone " +
                              "Where id=@id";
-
             try
             {
                 DbConnection.Open();
