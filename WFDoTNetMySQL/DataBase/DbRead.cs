@@ -18,7 +18,8 @@ namespace DataBase
             
             if (!String.IsNullOrWhiteSpace(txt))
             {
-                txtCmd = "SELECT * FROM contato WHERE nome LIKE @nome";
+                txtCmd = "SELECT * FROM contato " +
+                         "WHERE nome LIKE @nome";
             }
             else 
             {

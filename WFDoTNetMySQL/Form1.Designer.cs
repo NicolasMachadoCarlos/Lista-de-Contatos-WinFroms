@@ -185,6 +185,8 @@
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Label Busca;
         private System.Windows.Forms.Button Novo;
+        
+
     }
 }
 

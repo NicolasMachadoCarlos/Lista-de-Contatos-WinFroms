@@ -10,7 +10,8 @@ namespace DataBase
    
      public class DbConnection
     {
-        private static MySqlConnection Connection = new MySqlConnection("server=localhost;user=root;password=24tY89oP@Mysql9;database=db_agenda");
+        private static MySqlConnection Connection = 
+            new MySqlConnection("server=localhost;user=root;password=24tY89oP@Mysql9;database=db_agenda");
 
         public static MySqlConnection _Connection
         {

@@ -15,6 +15,7 @@ namespace WFDoTNetMySQL
     public partial class Form1 : Form
     {
         private int? idSelecionado = null;
+        private string caracteristicaSelecionada = null;
 
         public Form1()
         {
@@ -63,7 +64,7 @@ namespace WFDoTNetMySQL
 
                     MessageBox.Show("Dados atualizados com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    string txtSearch = txtBuscar.Text;
+                    string txtSearch = caracteristicaSelecionada;
                                        
                     var data = DbRead.ReadData(txtSearch);
 
@@ -89,6 +90,7 @@ namespace WFDoTNetMySQL
         private void button2_Click(object sender, EventArgs e)
         {
             string txtSearch = txtBuscar.Text;
+            caracteristicaSelecionada = txtSearch;
 
             try
             {
@@ -124,7 +126,7 @@ namespace WFDoTNetMySQL
         private void Novo_Click(object sender, EventArgs e)
         {
             idSelecionado = null;
-
+            caracteristicaSelecionada = null;
             txtNome.Text = "";
             txtTelefone.Text = "";
             txtEmail.Text = "";
