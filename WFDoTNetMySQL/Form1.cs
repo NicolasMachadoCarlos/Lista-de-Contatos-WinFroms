@@ -49,6 +49,7 @@ namespace WFDoTNetMySQL
 
         private void ReseteTxt()
         {
+            caracteristicaSelecionada = null;
             idSelecionado = null;
             txtNome.Text = "";
             txtTelefone.Text = "";
@@ -87,17 +88,14 @@ namespace WFDoTNetMySQL
                     InsertItens(data);
                                                                           
                 }
-                
-                idSelecionado = null;
-                txtNome.Clear();
-                txtEmail.Clear();
-                txtTelefone.Clear();
+
+                ReseteTxt();
+
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }          
-
 
         }
 
@@ -140,7 +138,6 @@ namespace WFDoTNetMySQL
         private void Novo_Click(object sender, EventArgs e)
         {
             ReseteTxt();
-            caracteristicaSelecionada = null;
         }
 
         private void Excluir_Click(object sender, EventArgs e)
