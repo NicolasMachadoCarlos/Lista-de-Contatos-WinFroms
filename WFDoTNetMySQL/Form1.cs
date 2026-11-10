@@ -57,6 +57,12 @@ namespace WFDoTNetMySQL
                     DbCreate.InsertData(txtNome.Text, txtEmail.Text, txtTelefone.Text);
 
                     MessageBox.Show("Dados inseridos com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    var data = DbRead.ReadData("");
+
+                    lstContato.Items.Clear();
+
+                    InsertItens(data);
                 }
                 else
                 {

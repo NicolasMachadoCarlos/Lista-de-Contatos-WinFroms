@@ -37,12 +37,12 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.Create = new System.Windows.Forms.Button();
             this.lstContato = new System.Windows.Forms.ListView();
+            this.Excluir = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.Search = new System.Windows.Forms.Button();
             this.Busca = new System.Windows.Forms.Label();
             this.Novo = new System.Windows.Forms.Button();
-            this.Excluir = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Excluir.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,21 @@
             this.lstContato.UseCompatibleStateImageBehavior = false;
             this.lstContato.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lstContato_ItemSelectionChanged);
             // 
+            // Excluir
+            // 
+            this.Excluir.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(109, 26);
+            this.Excluir.Text = "Excluir";
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
+            this.toolStripMenuItem1.Text = "Excluir";
+            // 
             // txtBuscar
             // 
             this.txtBuscar.Location = new System.Drawing.Point(174, 30);
@@ -151,21 +166,6 @@
             this.Novo.Text = "Novo";
             this.Novo.UseVisualStyleBackColor = true;
             this.Novo.Click += new System.EventHandler(this.Novo_Click);
-            // 
-            // Excluir
-            // 
-            this.Excluir.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.Excluir.Name = "Excluir";
-            this.Excluir.Size = new System.Drawing.Size(109, 26);
-            this.Excluir.Text = "Excluir";
-            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "Excluir";
             // 
             // Form1
             // 

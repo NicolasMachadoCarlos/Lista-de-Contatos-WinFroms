@@ -12,7 +12,8 @@ namespace DataBase
     {
         public static void ExcluirItem(int ?id)
         {
-            string txtCmd = "DELETE FROM contato WHERE id=@id ";
+            string txtCmd = "DELETE FROM contato WHERE id=@id;" +
+                            "ALTER TABLE contato AUTO_INCREMENT = 1; ";
 
             try
             {
