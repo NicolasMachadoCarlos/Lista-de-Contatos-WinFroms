@@ -47,6 +47,14 @@ namespace WFDoTNetMySQL
             }
         }
 
+        private void ReseteTxt()
+        {
+            idSelecionado = null;
+            txtNome.Text = "";
+            txtTelefone.Text = "";
+            txtEmail.Text = "";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -131,11 +139,8 @@ namespace WFDoTNetMySQL
 
         private void Novo_Click(object sender, EventArgs e)
         {
-            idSelecionado = null;
+            ReseteTxt();
             caracteristicaSelecionada = null;
-            txtNome.Text = "";
-            txtTelefone.Text = "";
-            txtEmail.Text = "";
         }
 
         private void Excluir_Click(object sender, EventArgs e)
@@ -161,6 +166,7 @@ namespace WFDoTNetMySQL
 
                     InsertItens(data);
 
+                    ReseteTxt();
                 }
              
             }
