@@ -11,7 +11,7 @@ namespace DataBase
      internal class DbConnection
     {
         private static MySqlConnection Connection = 
-            new MySqlConnection("server=localhost;user=root;password=24tY89oP@Mysql9;database=db_agenda");
+            new MySqlConnection("server=localhost;user='seuUser';password='suaSenha';database=db_agenda");
 
         public static MySqlConnection _Connection
         {
