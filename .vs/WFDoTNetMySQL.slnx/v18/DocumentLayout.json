@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{933230F7-D4A7-43EE-9916-F94D15D9A869}|WFDoTNetMySQL\\WFDoTNetMySQL.csproj|c:\\users\\pc\\onedrive\\documentos\\codigos\\projetos\\registro_de_contatos\\wfdotnetmysql\\database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{933230F7-D4A7-43EE-9916-F94D15D9A869}|WFDoTNetMySQL\\WFDoTNetMySQL.csproj|solutionrelative:wfdotnetmysql\\database\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{933230F7-D4A7-43EE-9916-F94D15D9A869}|WFDoTNetMySQL\\WFDoTNetMySQL.csproj|c:\\users\\pc\\onedrive\\documentos\\codigos\\projetos\\registro_de_contatos\\wfdotnetmysql\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{933230F7-D4A7-43EE-9916-F94D15D9A869}|WFDoTNetMySQL\\WFDoTNetMySQL.csproj|solutionrelative:wfdotnetmysql\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,20 +22,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\WFDoTNetMySQL\\Form1.cs",
               "RelativeDocumentMoniker": "WFDoTNetMySQL\\Form1.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\WFDoTNetMySQL\\Form1.cs",
               "RelativeToolTip": "WFDoTNetMySQL\\Form1.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAowGIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T20:56:35.838Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbConnection.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\WFDoTNetMySQL\\DataBase\\DbConnection.cs",
+              "RelativeDocumentMoniker": "WFDoTNetMySQL\\DataBase\\DbConnection.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\WFDoTNetMySQL\\DataBase\\DbConnection.cs",
+              "RelativeToolTip": "WFDoTNetMySQL\\DataBase\\DbConnection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-23T17:19:01.207Z",
               "EditorCaption": ""
             },
             {
@@ -48,7 +65,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Documentos\\Codigos\\Projetos\\Registro_De_Contatos\\WFDoTNetMySQL\\Form1.cs",
               "RelativeDocumentMoniker": "WFDoTNetMySQL\\Form1.cs",
